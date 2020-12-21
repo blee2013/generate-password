@@ -98,7 +98,7 @@ if (options.containsAlphaUpper) {
   includedCharacters.push(getRandom(alphaUpper));
 }
 //selects number to be in password 
-if (options.containsnumber) {
+if (options.containsNumber) {
   optionalCharacters = optionalCharacters.concat(number);
   includedCharacters.push(getRandom(number));
 }
@@ -109,9 +109,9 @@ if (options.containsSpecCharacter) {
 }
 //create a loop for the password depending on length of pswd  to keep selecting from options untill length fulfilled
 for (var i = 0; i < options.length; i++) {
-  var optionalCharacters = getRandom(optionalCharacters);
+  var chosenpassword = getRandom(optionalCharacters);
 
-  outcome.push(optionalCharacters);
+  outcome.push(chosenpassword);
 }
 //add in included character for return
 for (var i = 0; i < includedCharacters.length; i++) {
